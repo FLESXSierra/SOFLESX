@@ -29,6 +29,7 @@ import lesx.property.price.LesxPriceDataModel;
 import lesx.property.properties.ELesxFunction;
 import lesx.property.properties.ELesxLocations;
 import lesx.property.properties.ELesxUseCase;
+import lesx.property.properties.LesxReportFunction;
 import lesx.property.properties.LesxReportItem;
 import lesx.property.properties.LesxReportTree;
 import lesx.scene.controller.LesxController;
@@ -184,14 +185,17 @@ public class LesxReportController extends LesxController {
    * Edits a Function
    */
   private void editFunction() {
-    if (functionVBox.getFunction()
-        .getType() == null) {
+    final LesxReportFunction edited = functionVBox.getFunction();
+    if (edited.getType() == null) {
       emptyFunctionError("'Función'");
       return;
     }
     if (functionSelected != null) {
-      dataModelReport.editFunction(functionSelected, functionVBox.getFunction());
+      dataModelReport.editFunction(functionSelected, edited);
+      final Long tempKey = functionSelected.getId();
       refreshReportFunctionTable();
+      tableFunction.getSelectionModel()
+          .select(tempKey);
       pendingChanges.set(true);
     }
     else {

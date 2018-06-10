@@ -18,7 +18,7 @@ public class LesxPrice extends LesxComponent implements Cloneable {
   private LesxProperty total;
   private LesxProperty resource_id;
   private LesxProperty typePrice;
-  private LesxProperty validFrom;
+  private LesxProperty date;
 
   public LesxPrice(LesxPriceXMLParser price) {
     initializeProperties();
@@ -45,11 +45,11 @@ public class LesxPrice extends LesxComponent implements Cloneable {
     }
     if (price.getValidFrom() == null) {
       LOGGER.log(Level.WARNING, LesxMessage.getMessage("WARNING-FOUND_NULL_VALID_FROM"));
-      validFrom.setValue(LocalDate.now()
+      date.setValue(LocalDate.now()
           .toString());
     }
     else {
-      validFrom.setValue(price.getValidFrom());
+      date.setValue(price.getValidFrom());
     }
     typePrice.setValue(price.getTypePrice());
     name.setValue(price.getName());
@@ -80,11 +80,11 @@ public class LesxPrice extends LesxComponent implements Cloneable {
     typePrice.setName(LesxString.PROPERTY_PRICE_TYPE);
     typePrice.setType(ELesxPropertyType.PRICE_TYPE);
     typePrice.setMandatory(true);
-    validFrom = new LesxProperty();
-    validFrom.setMandatory(true);
-    validFrom.setType(ELesxPropertyType.DATE);
-    validFrom.setName(LesxString.PROPERTY_DATE);
-    setPropertyValues(Arrays.asList(id, name, resource_id, total, typePrice, validFrom));
+    date = new LesxProperty();
+    date.setMandatory(true);
+    date.setType(ELesxPropertyType.DATE);
+    date.setName(LesxString.PROPERTY_DATE);
+    setPropertyValues(Arrays.asList(id, name, resource_id, total, typePrice, date));
   }
 
   public LesxPrice() {
@@ -151,16 +151,16 @@ public class LesxPrice extends LesxComponent implements Cloneable {
     return (Boolean) typePrice.getValue();
   }
 
-  public String getValidFrom() {
-    return (String) validFrom.getValue();
+  public String getDate() {
+    return (String) date.getValue();
   }
 
-  public void setValidFrom(String validFrom) {
-    this.validFrom.setValue(validFrom);
+  public void setDate(String validFrom) {
+    this.date.setValue(validFrom);
   }
 
-  public LesxProperty validFromProperty() {
-    return validFrom;
+  public LesxProperty dateProperty() {
+    return date;
   }
 
   @Override

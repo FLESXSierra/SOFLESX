@@ -68,6 +68,7 @@ public class LesxFunctionRadioButton extends VBox {
           }
           else {
             datePicker.setVisible(false);
+            datePicker.reset();
             datePicker.valueProperty()
                 .removeListener(listener);
           }

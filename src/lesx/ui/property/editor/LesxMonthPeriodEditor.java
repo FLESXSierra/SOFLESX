@@ -56,8 +56,8 @@ public class LesxMonthPeriodEditor extends TextField {
   }
 
   public void setValueAndRefresh(String value) {
-    refresh.set(!refresh.get());
     period.set(value);
+    refresh.set(!refresh.get());
   }
 
   public void reset() {

@@ -59,6 +59,8 @@ public class LesxMonthPeriodSkin extends TextFieldSkin {
    */
   private void resetValues() {
     showingText.set("");
+    editor.setValue("");
+    validate();
   }
 
   /**

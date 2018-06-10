@@ -62,7 +62,7 @@ public class LesxString {
   public static final String PROPERTY_RESOURCE_ID = "ID de Recurso";
   public static final String PROPERTY_PRICE_TYPE = "Tipo";
   public static final String PROPERTY_LIST = "Lista";
-  public static final String PROPERTY_DATE = "Válido desde";
+  public static final String PROPERTY_DATE = "Fecha";
   public static final String PROPERTY_SUM = "Suma";
   public static final String PROPERTY_END_MONTH = "Fin de mes";
   public static final String PROPERTY_PERIOD = "Periodo";

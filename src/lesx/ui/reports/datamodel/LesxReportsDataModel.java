@@ -75,7 +75,7 @@ public class LesxReportsDataModel {
         LocalDate endMonth = LocalDate.now();
         reportValue = String.valueOf(prices.stream()
             .filter(price -> {
-              LocalDate priceDate = LocalDate.parse(price.getValidFrom(), formatter);
+              LocalDate priceDate = LocalDate.parse(price.getDate(), formatter);
               return priceDate.getMonth()
                   .equals(endMonth.getMonth()) && priceDate.getYear() == endMonth.getYear();
             })
@@ -96,12 +96,12 @@ public class LesxReportsDataModel {
           endPeriodMonth.plusMonths(1);
           reportValue = String.valueOf(prices.stream()
               .filter(price -> { // TODO Está mal el filtro
-                LocalDate priceDate = LocalDate.parse(price.getValidFrom(), formatter);
-                boolean afterOrEqualsEnd = (priceDate.getMonth()
-                    .equals(endPeriodMonth.getMonth()) || priceDate.isBefore(endPeriodMonth)) && priceDate.getYear() == endPeriodMonth.getYear();
-                boolean afterOrEqualsStart = (priceDate.getMonth()
-                    .equals(startPeriodMonth.getMonth()) || priceDate.isBefore(startPeriodMonth)) && priceDate.getYear() == startPeriodMonth.getYear();
-                return afterOrEqualsEnd && afterOrEqualsStart;
+                LocalDate priceDate = LocalDate.parse(price.getDate(), formatter);
+                boolean beforeOrEqualsEnd = priceDate.getYear() == endPeriodMonth.getYear() && (priceDate.getMonth()
+                    .equals(endPeriodMonth.getMonth()) || priceDate.isBefore(endPeriodMonth));
+                boolean afterOrEqualsStart = priceDate.getYear() == startPeriodMonth.getYear() && (priceDate.getMonth()
+                    .equals(startPeriodMonth.getMonth()) || priceDate.isAfter(startPeriodMonth));
+                return beforeOrEqualsEnd && afterOrEqualsStart;
               })
               .mapToLong(price -> Boolean.TRUE.equals(price.getTypePrice()) ? price.getTotal() : -1 * price.getTotal())
               .sum());

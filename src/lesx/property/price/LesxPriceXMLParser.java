@@ -34,7 +34,7 @@ public class LesxPriceXMLParser {
     this.resource_id = price.getResource_id();
     this.total = price.getTotal();
     this.typePrice = price.getTypePrice();
-    this.validFrom = price.getValidFrom();
+    this.validFrom = price.getDate();
     // TODO Add properties whenever is added new.
   }
 

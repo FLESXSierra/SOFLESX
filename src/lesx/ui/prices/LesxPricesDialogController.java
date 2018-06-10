@@ -166,12 +166,12 @@ public class LesxPricesDialogController extends LesxController {
             .getTypePrice())) ? LesxMessage.getMessage("TEXT-PROPERTY_PRICE_EDITOR_TRUE") : LesxMessage.getMessage("TEXT-PROPERTY_PRICE_EDITOR_FALSE"));
       }
     });
-    validFrom = new TableColumn<>(LesxMessage.getMessage("TEXT-COLUMN_VALID_FROM"));
+    validFrom = new TableColumn<>(LesxMessage.getMessage("TEXT-COLUMN_DATE"));
     validFrom.setCellValueFactory(new Callback<CellDataFeatures<LesxPrice, String>, ObservableValue<String>>() {
       @Override
       public ObservableValue<String> call(CellDataFeatures<LesxPrice, String> data) {
         return new SimpleStringProperty(data.getValue()
-            .getValidFrom());
+            .getDate());
       }
     });
     nameColumn.prefWidthProperty()
