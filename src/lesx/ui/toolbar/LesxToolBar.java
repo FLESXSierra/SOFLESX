@@ -17,29 +17,25 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBase;
 import javafx.scene.control.Separator;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToolBar;
 import javafx.scene.control.Tooltip;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import lesx.gui.message.LesxMessage;
 import lesx.property.properties.ELesxActions;
 import lesx.property.properties.ELesxUseCase;
 import lesx.utils.LesxMisc;
 
-public class LesxToolBar extends Pane {
+public class LesxToolBar extends ToolBar {
 
   private Button deselect;
   private Button delete;
   private Button add;
   private Button edit;
   private ToggleButton children;
-  private HBox wrapper;
 
   private Map<ELesxActions, EventHandler<ActionEvent>> actions;
   private EventHandler<ActionEvent> deselectAction;
@@ -59,14 +55,6 @@ public class LesxToolBar extends Pane {
     deselect.setText(LesxMessage.getMessage("TEXT-DESELECT_BUTTON"));
     deselect.disableProperty()
         .bind(Bindings.not(selectedItem));
-    wrapper = new HBox();
-    wrapper.setSpacing(5);
-    wrapper.setAlignment(Pos.CENTER_RIGHT);
-    wrapper.setPadding(new Insets(3, 3, 3, 3));
-    wrapper.prefWidthProperty()
-        .bind(prefWidthProperty());
-    wrapper.prefHeightProperty()
-        .bind(prefHeightProperty());
     buildButtons(useCase);
   }
 
@@ -78,15 +66,13 @@ public class LesxToolBar extends Pane {
     return tool;
   }
 
-  private void addButtonsToWrapper() {
+  private void addButtonsToToolBar() {
     if (!LesxMisc.isEmpty(buttons)) {
       for (Object button : buttons) {
         Separator sep = new Separator();
         sep.setOrientation(Orientation.VERTICAL);
-        wrapper.getChildren()
-            .add((ButtonBase) button);
-        wrapper.getChildren()
-            .add(sep);
+        getItems().add((ButtonBase) button);
+        getItems().add(sep);
       }
     }
   }
@@ -140,11 +126,9 @@ public class LesxToolBar extends Pane {
   }
 
   private void buildButtons(ELesxUseCase useCase) {
-    getChildren().clear();
+    getItems().clear();
     actions.clear();
     actions.put(ACTIONS_DESELECT, deselectAction);
-    wrapper.getChildren()
-        .clear();
     switch (useCase) {
       case UC_TREE:
         children = new ToggleButton();
@@ -200,8 +184,7 @@ public class LesxToolBar extends Pane {
       default:
         break;
     }
-    addButtonsToWrapper();
-    getChildren().add(wrapper);
+    addButtonsToToolBar();
   }
 
   public BooleanProperty selectedFilterTableProperty() {
