@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import lesx.ui.components.LesxTreeViewPane?>
+<?import lesx.ui.components.LesxTableViewPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesx.ui.mainpage.LesxControllerMainpage">
+   <children>
+      <SplitPane dividerPositions="0.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <LesxTreeViewPane fx:id="treePane">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="30.0" />
+               </padding></LesxTreeViewPane>
+          <LesxTableViewPane fx:id="tablePane">
+               <padding>
+                  <Insets top="30.0" />
+               </padding></LesxTableViewPane>
+        </items>
+      </SplitPane>
+      <HBox fx:id="progress" alignment="CENTER" spacing="10.0" style="-fx-background-color: RGBA(0,0,0,0.3);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ProgressIndicator />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </HBox>
+      <MenuBar fx:id="menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu fx:id="file" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="saveXML" mnemonicParsing="false" text="Save" />
+              <MenuItem fx:id="exportXML" mnemonicParsing="false" text="Export" />
+            </items>
+          </Menu>
+          <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="prices" mnemonicParsing="false" text="Price" />
+              <MenuItem fx:id="report" mnemonicParsing="false" text="Report" />
+            </items>
+          </Menu>
+          <Menu fx:id="help" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

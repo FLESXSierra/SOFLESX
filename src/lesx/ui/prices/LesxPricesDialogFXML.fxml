@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import lesx.ui.components.LesxTreeViewPane?>
+<?import lesx.ui.components.LesxTableViewPane?>
+
+<BorderPane minHeight="480.0" minWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesx.ui.prices.LesxPricesDialogController">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.29797979797979796" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <LesxTableViewPane fx:id="paneTableCostumer"/>
+                <LesxTableViewPane fx:id="paneTablePrice"/>
+              </items> 
+            </SplitPane>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="header" text="Label" />
+            <Separator prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </top>
+</BorderPane>

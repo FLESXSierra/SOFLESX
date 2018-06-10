@@ -1,0 +1,130 @@
+
+TEXT-TITLE_READING_XML = Cargando XML.
+TEXT-TITLE_MAINPAGE = FLESX Page.
+TEXT-TITLE_COSTUMER_DIALOG_CREATE = Crear nuevo Objeto.
+TEXT-TITLE_PRICES_PAGE = Precios.
+TEXT-TITLE_PRICE_DIALOG_CREATE = Crear nuevo Precio.
+TEXT-TITLE_SELECT_COSTUMER_DIALOG = Selección de Objectos.
+TEXT-TITLE_REPORT_DIALOG_CREATE = Crear nuevo Reporte.
+
+TEXT-BUTTON_OK = Ok
+TEXT-BUTTON_APPLY = Aplicar
+TEXT-BUTTON_CANCEL = Cancelar
+TEXT-EDIT_BUTTON = Editar
+TEXT-BUTTON_ADD = Agregar
+
+TEXT-DESCRIPTION_LABEL_NEW_COSTUMER = Panel de creación de nuevo objeto, por favor llene las propiedades requeridas.
+TEXT-DESCRIPTION_LABEL_EDIT_COSTUMER = Panel de edición de objectos, por favor llene las propiedades requeridas.
+TEXT-DESCRIPTION_LABEL_NEW_REPORT = Panel de creación de Reporte, por favor llene las propiedades requeridas.
+TEXT-DESCRIPTION_LABEL_EDIT_REPORT = Panel de edición de Reporte, por favor llene las propiedades requeridas.
+TEXT-LOCATION_LABEL_COSTUMER_PANE = Objecto: {0}
+TEXT-DESCRIPTION_LABEL_NEW_PRICE = Panel de creación de nuevo Precios, por favor llene las propiedades requeridas.
+TEXT-DESCRIPTION_LABEL_EDIT_PRICE = Panel de edición de Precios, por favor llene las propiedades requeridas.
+TEXT-HEADER_LABEL_PRICE_PANE = Precio: {0}
+TEXT-HEADER_LABEL_REPORT_PANE = Reporte: {0}
+
+TEXT-PRICE_DIALOG_HEADER = Panel de manejo de precios, puede crear, editar y eliminar precios. \nAsi mismo podrá crear reportes sobre los precios. 
+
+TEXT-LOADING_TITLE = Cargando.
+TEXT-LOADING_ERROR_TITLE = ¡Un error se ha generado!.
+
+TEXT-COLUMN_NAME_NAME = Nombre
+TEXT-COLUMN_NAME_CC = C.C.
+TEXT-COLUMN_NAME_LOCATION = Localidad
+TEXT-COLUMN_NAME_PRICE = Precios
+TEXT-COLUMN_ID_PRICE = ID
+TEXT-COLUMN_TOTAL_PRICE = Valor
+TEXT-COLUMN_PRICE_TYPE = Tipo
+TEXT-COLUMN_VALUE = Valor
+TEXT-COLUMN_VALID_FROM = Valido Hasta
+
+TEXT-HEADER_READING_XML = Por favor espere mientras el archivo XML se carga.
+TEXT-DESELECT_BUTTON = Deseleccionar
+TEXT-ADD_BUTTON = Agregar
+TEXT-DELETE_BUTTON = Eliminar
+TEXT-SELECT_CHILDREN_BUTTON = Children
+TEXT-SAVE_BUTTON = Guardar
+TEXT-NO_SAVE_BUTTON = No guardar 
+TEXT-CANCEL_BUTTON = Cancelar
+
+TEXT-MENUITEM_FILE_SAVE = Guardar FLESX
+TEXT-MENUITEM_EXPORT_SAVE = Exportart FLESX
+TEXT-MENUITEM_EDIT_PRICES = Precios
+TEXT-MENUBAR_FILE = Archivo
+TEXT-MENUBAR_EDIT = Editar
+TEXT-MENUBAR_HELP = Ayuda
+TEXT-MENUITEM_REPORTS = Reportes
+
+TEXT-TOOLTIP_SELECT_CHILDREN = Cuando este botón está activo, permite seleccionar los objectos que están asignados a los hijos del árbol de búsqueda.
+TEXT-TOOLTIP_MANDATORY_PROPERTY = Esta propiedad es de tipo mandatoria, se requiere que se llene de algún tipo de valor.
+TEXT-TOOLTIP_UNIQUE_PROPERTY = Esta propiedad es de tipo unica, no se permiten valores iguales.
+TEXT-TOOLTIP_TYPE_PROPERTY = Propiedad de tipo {0}.
+
+TEXT-FUNCTION_LABEL = Funciones:
+TEXT-REPORT_FUNCTION_HEADER = Seleccione una función que desea agregar en la tabla de reportes, una vez seleccionada presione el botón de agregar para incluirla al reporte.
+TEXT-FUNCTION_SUM = Sumatoria.
+TEXT-FUNCTION_PERIOD = Por periodo.
+TEXT-FUNCTION_END_MONTH = Final de mes.
+
+TEXT-ALERT_DIALOG_TITLE_PENDING_SAVES = ¡Hay cambios pendiendes por guardar!
+TEXT-ALERT_DIALOG_HEADER_PENDING_SAVES = ¡Hemos encontrado cambios pendientes sin guardar!
+TEXT-ALERT_DIALOG_CONTEXT_PENDING_SAVES = El objecto '{0}' tiene cambios por guardar, ¿está seguro de cerrar esta ventana sin guardar?
+
+TEXT-ALERT_DIALOG_CONTEXT_ERROR = Por favor revise los siguientes problemas:
+TEXT-INVALID_PROPERTY_ISSUE = Hay objectos que no cumplen con los requerimientos necesarios para ser guardados.
+TEXT-DUPLICATE_PROPERTY_ISSUE = El objecto con ID: '{0}', tiene una propiedad duplicada.
+TEXT-DUPLICATE_ID_PROPERTY_ISSUE = El objecto con ID: '{0}', tiene la ID duplicada, por favor, contactese con el admin.
+TEXT-ALERT_DIALOG_TITLE_ERROR = ¡ERROR!
+TEXT-ALERT_DIALOG_HEADER_ERROR = ¡Se han encontrado errores!
+TEXT-ALERT_CONFIRMATION_TITLE = ¿Esta seguro de esta acción?
+TEXT-ALERT_CONFIRMATION_DELETE_HEADER = ¿Está seguro de eliminar al objeto '{0}'?
+TEXT-ALERT_CONFIRMATION_DELETE_OBJECTS_HEADER = ¿Está seguro de eliminar {0} objecto(s)?
+TEXT-ALERT_HEADER_ON_EXIT_STAGE = ¿Esta seguro de cerrar esta ventana?\nLos cambios realizados se guardarán automáticamente.
+TEXT-ALERT_TITLE_ON_EXIT_STAGE = Salir.
+TEXT-ALERT_DIALOG_CONTEXT_REPORT_TREE_SELECT_NULL = No se puede agregar objectos si no se ecuentra seleccionado un reporte en el árbol.
+TEXT-ALERT_DIALOG_CONTEXT_REPORT_FUNCTION_SELECT_NULL = No se puede editar la función si no se ecuentra seleccionada una previamente en la tabla.
+
+TEXT-REPORT_TITLE = Reportes.
+TEXT-REPORT_BUILDER_HEADER = Generador de reportes, agregue o edite reportes.\nUse el árbol de reportes para crear categorias y guardar reportes para usar a futuro.
+TEXT-REPORT_BUILDER_FUNCTION_HEADER = Agregar/Editar las operaciones requeridas en el reporte.
+
+TEXT-PROPERTY_PRICE_EDITOR_NULL = Sin valor.
+TEXT-PROPERTY_PRICE_EDITOR_TRUE = Ganancias.
+TEXT-PROPERTY_PRICE_EDITOR_FALSE = Gastos.
+
+DATE-FORMATTER_PERIOD_DATE_FORMAT = dd.MM.yyyy
+
+LOGGER-WARNING_MESSAGE = [WARNING] {0} - ¡Cuidado, hemos encontrado una advertencia! : 
+LOGGER-ERROR_MESSAGE = [ERROR] {0} - ¡Un error a ocurrido! : 
+LOGGER-LOG_MESSAGE = [LOG] {0} - 
+LOGGER-WARNING_NO_KEY = No se han encontrado mensajes con la key {0}.
+
+ERROR-XML_READER = Error leyendo el archivo con el path '{0}'.
+ERROR-XML_WRITER = Error al escribir en el archivo con el path '{0}'.
+ERROR-XML_USECASE_NOT_SUPPORTED = El caso de uso '{0}' no esta soportado por el momento.
+ERROR-SAVE_XML_DATA = Ocurrió un error al guardar el archivo con el caso de uso '{0}'.
+ERROR-CAST_XML_DATA_SAVE = ¡Error! La clase '{0}' no es soportada por el caso de uso '{1}'.
+
+ERROR-MAIN_CLASS = Un error se ha encontrado en el main class!.
+ERROR-MAIN_ACTIVATE_FXML = Un error se ha encontrado activando una escena.
+
+ERROR-DATA_MODEL_SAVE = A ocurredo un error intentando salvar el objecto {0} : ref. {1}
+
+ERROR-PROPERTY_UTILS_PARSING = Error al convertir {0} el objecto con valor '{1}'.
+ERROR-PROPERTY_NOT_CLONNABLE = Error al tratar de clonar la property '{0}'.
+ERROR-USE_CASE_NOT_SUPPORTED = Error, el caso de uso {0} no está soportado.
+ERROR-NO_NULL_VALUE = {0} No acepta valor nulo.
+ERROR-EXPORT_XMLS = No se ha podido exportar de manera exitosa la exportación de las bases de datos.
+
+WARNING-NO_COSTUMER_FOUND_BY_KEY = No se encontró un costumer con la key '{0}'.
+WARNING-FOUND_NULL_ID = El ID no puede ser null, se le asignará un ID temporal al objeto.
+WARNING-FOUND_NULL_LOCATION = No se permite una key nula, se asignará como location 'Colombia' por defecto.
+WARNING-FOUND_NULL_PRICE = No se encontró un precio en el objecto importado, se asignará un precio '0' temporalmente.
+WARNING-FOUND_NULL_RESOURCE_ID = No se encontró un Id de recurso en el objecto importado, se asignará un Id de '0' temporalmente.
+WARNING-FOUND_NULL_PARENT_ID = No se encontró un Parent Id de Report Items en el objecto importado, se asignará un Parent Id de '0' temporalmente.
+WARNING-FOUND_NULL_VALID_FROM = No se encontró una fecha válida, se asignará la fecha de hoy temporalmente.
+WARNING-FILES_ALREADY_EXIST = Uno o varios archivos ya existen, por favor ten cuidado con estos archivos.
+
+INFO-XML_WRITER_COMPLETE = XML Creado exitosamente.
+INFO-XML_READER_COMPLETE = XML Leido exitosamente.
+INFO-OBJECT_ADDED = Se han agregado {0} objectos.
