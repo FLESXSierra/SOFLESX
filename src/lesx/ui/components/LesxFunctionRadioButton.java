@@ -56,6 +56,7 @@ public class LesxFunctionRadioButton extends VBox {
             function.setValue("");
           }
         });
+    sum.setTooltip(generateToolTip(ELesxFunction.SUM));
     period.setToggleGroup(toggle);
     period.setText(LesxMessage.getMessage("TEXT-FUNCTION_PERIOD"));
     period.selectedProperty()
@@ -73,7 +74,7 @@ public class LesxFunctionRadioButton extends VBox {
                 .removeListener(listener);
           }
         });
-    period.setTooltip(generateToolTip());
+    period.setTooltip(generateToolTip(ELesxFunction.PERIOD));
     endMonth.setToggleGroup(toggle);
     endMonth.setText(LesxMessage.getMessage("TEXT-FUNCTION_END_MONTH"));
     endMonth.selectedProperty()
@@ -96,14 +97,24 @@ public class LesxFunctionRadioButton extends VBox {
   /**
    * Creates a ToolTip to improve the user experience, telling why the given date is invalid
    *
+   * @param type
+   *
    * @return a ToolTip
    */
-  private Tooltip generateToolTip() {
+  private Tooltip generateToolTip(ELesxFunction type) {
     Tooltip tool = new Tooltip();
     StringBuilder text = new StringBuilder();
-    text.append("Una fecha puede ser invalida por:\n")
-        .append(" - Fecha incompleta.\n")
-        .append(" - Fecha inicial es posterior a la final.");
+    if (type == ELesxFunction.PERIOD) {
+      text.append("Una fecha puede ser invalida por:\n")
+          .append(" - Fecha incompleta.\n")
+          .append(" - Fecha inicial es posterior a la final.");
+    }
+    else {
+      text.append("La función Suma determina:\n")
+          .append(" - Sumatoria total de los precios del recurso seleccionado.\n")
+          .append(" - Suma el total de la sumatoria del punto anterior si son varios recursos\n")
+          .append(" - Ignora las Fechas de los precios.");
+    }
     tool.setText(text.toString());
     return tool;
   }
